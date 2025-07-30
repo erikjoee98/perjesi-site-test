@@ -84,22 +84,22 @@ export default function Navbar() {
           {/* Mobil hamburger menü ikon */}
           <div className="md:hidden">
             <button
-              className="relative w-8 h-6 flex flex-col justify-between items-center focus:outline-none"
-              onClick={() => setMobileOpen(!mobileOpen)}
-            >
+            className="relative w-6 h-6 flex items-center justify-center focus:outline-none"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
               <span
-                className={`block h-0.5 w-full bg-white transform transition duration-300 ease-in-out ${
-                  mobileOpen ? "rotate-45 translate-y-2" : ""
+                className={`absolute w-6 h-0.5 bg-white transform transition duration-300 ease-in-out ${
+                  mobileOpen ? "rotate-45 top-2.5" : "top-0"
                 }`}
               ></span>
               <span
-                className={`block h-0.5 w-full bg-white transition-all duration-300 ease-in-out ${
-                  mobileOpen ? "opacity-0" : ""
+                className={`absolute w-6 h-0.5 bg-white transition-opacity duration-300 ease-in-out ${
+                  mobileOpen ? "opacity-0" : "top-2.5"
                 }`}
               ></span>
               <span
-                className={`block h-0.5 w-full bg-white transform transition duration-300 ease-in-out ${
-                  mobileOpen ? "-rotate-45 -translate-y-2" : ""
+                className={`absolute w-6 h-0.5 bg-white transform transition duration-300 ease-in-out ${
+                  mobileOpen ? "-rotate-45 top-2.5" : "top-5"
                 }`}
               ></span>
             </button>
