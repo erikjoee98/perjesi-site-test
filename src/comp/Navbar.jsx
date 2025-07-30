@@ -15,11 +15,14 @@ export default function Navbar() {
 
       // Csak mobilon rejtsük el
       if (window.innerWidth <= 768) {
-        if (currentY > lastScrollY && currentY > 100) {
-          setHidden(true); // lefelé görget → tűnjön el
-        } else {
-          setHidden(false); // felfelé görget → jelenjen meg
-        }
+        const scrollDiff = lastScrollY - currentY;
+
+          if (currentY > lastScrollY && currentY > 100) {
+            setHidden(true); // lefelé → elrejt
+          } else if (scrollDiff > 30 || currentY < 50) {
+            setHidden(false); // csak akkor jön vissza, ha legalább 30px-et felfelé ment
+          }
+
       }
 
       setLastScrollY(currentY);
