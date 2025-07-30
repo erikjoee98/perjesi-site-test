@@ -4,16 +4,31 @@ import { customScrollTo } from "../utils/customtoscroll";
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const handleScroll = () => {
+      const currentY = window.scrollY;
 
-  // Mobil menüpont kattintáskor smooth scroll + zárás
+      setScrolled(currentY > 50);
+
+      // Csak mobilon rejtsük el
+      if (window.innerWidth <= 768) {
+        if (currentY > lastScrollY && currentY > 100) {
+          setHidden(true); // lefelé görget → tűnjön el
+        } else {
+          setHidden(false); // felfelé görget → jelenjen meg
+        }
+      }
+
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   const handleMobileLinkClick = (id) => {
     customScrollTo(id, 1000);
     setMobileOpen(false);
@@ -21,9 +36,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full text-white z-50 transition-all duration-300 ${
+      className={`fixed w-full text-white z-50 transition-all duration-300 transform ${
         scrolled ? "shadow-md backdrop-blur bg-gray-900/90" : "bg-gray-900"
-      }`}
+      } ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="w-full px-6 py-4">
         <div className="flex justify-between items-center">
@@ -63,33 +78,32 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobil menü gomb */}
+          {/* Mobil hamburger menü ikon */}
           <div className="md:hidden">
-  <button
-    className="relative w-8 h-6 flex flex-col justify-between items-center focus:outline-none"
-    onClick={() => setMobileOpen(!mobileOpen)}
-  >
-    <span
-      className={`block h-0.5 w-full bg-white transform transition duration-300 ease-in-out ${
-        mobileOpen ? "rotate-45 translate-y-2" : ""
-      }`}
-    ></span>
-    <span
-      className={`block h-0.5 w-full bg-white transition-all duration-300 ease-in-out ${
-        mobileOpen ? "opacity-0" : ""
-      }`}
-    ></span>
-    <span
-      className={`block h-0.5 w-full bg-white transform transition duration-300 ease-in-out ${
-        mobileOpen ? "-rotate-45 -translate-y-2" : ""
-      }`}
-    ></span>
-  </button>
-</div>
-
+            <button
+              className="relative w-8 h-6 flex flex-col justify-between items-center focus:outline-none"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              <span
+                className={`block h-0.5 w-full bg-white transform transition duration-300 ease-in-out ${
+                  mobileOpen ? "rotate-45 translate-y-2" : ""
+                }`}
+              ></span>
+              <span
+                className={`block h-0.5 w-full bg-white transition-all duration-300 ease-in-out ${
+                  mobileOpen ? "opacity-0" : ""
+                }`}
+              ></span>
+              <span
+                className={`block h-0.5 w-full bg-white transform transition duration-300 ease-in-out ${
+                  mobileOpen ? "-rotate-45 -translate-y-2" : ""
+                }`}
+              ></span>
+            </button>
+          </div>
         </div>
 
-        {/* Mobil menü animált lenyílással */}
+        {/* Mobil menü - lenyílva */}
         <div
           className={`md:hidden overflow-hidden transition-[max-height] duration-500 ease-in-out ${
             mobileOpen ? "max-h-96" : "max-h-0"
