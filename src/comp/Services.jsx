@@ -72,28 +72,37 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="py-20 md:py-32 bg-white" id="szolgaltatasok">
+    <section
+      className="py-20 md:py-32 bg-white"
+      id="szolgaltatasok"
+      role="region"
+      aria-label="Ügyvédi szakterületek"
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 reveal-bottom">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-            Szakterületek
+            Jogi szakterületeim
           </h2>
           <div className="divider-center"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Széleskörű jogi szolgáltatásokat nyújtok magánszemélyek és
-            vállalkozások számára. Minden ügyet a legnagyobb szakértelemmel és
-            odafigyeléssel kezelek.
+            Ügyvédi irodám széleskörű jogi tanácsadást nyújt magánszemélyek és vállalkozások számára.
+            Célom, hogy minden jogi ügyet személyre szabott, empatikus megközelítéssel és precizitással kezeljek.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (
-            <div
+            <article
               key={idx}
               className="service-card bg-white p-8 shadow-md border border-gray-200 reveal"
               style={{ animationDelay: `${0.1 * (idx + 1)}s` }}
+              role="article"
+              aria-labelledby={`service-title-${idx}`}
             >
-              <div className="service-icon text-gray-900 mb-6">
+              <div
+                className="service-icon text-gray-900 mb-6"
+                title={`${service.title} ikon`}
+              >
                 <svg
                   className="w-12 h-12"
                   fill="none"
@@ -102,15 +111,19 @@ export default function Services() {
                   strokeLinejoin="round"
                   strokeWidth="1.5"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   {service.icon}
                 </svg>
               </div>
-              <h3 className="text-xl font-serif font-bold text-gray-900 mb-4">
+              <h3
+                className="text-xl font-serif font-bold text-gray-900 mb-4"
+                id={`service-title-${idx}`}
+              >
                 {service.title}
               </h3>
               <p className="text-gray-600 mb-6">{service.desc}</p>
-              <ul className="text-gray-600 space-y-3 mb-8">
+              <ul className="text-gray-600 space-y-3 mb-8 list-none pl-0">
                 {service.points.map((point, i) => (
                   <li key={i} className="flex items-center">
                     <svg
@@ -121,6 +134,7 @@ export default function Services() {
                       strokeLinejoin="round"
                       strokeWidth="2"
                       viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
@@ -128,7 +142,7 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </article>
           ))}
         </div>
       </div>

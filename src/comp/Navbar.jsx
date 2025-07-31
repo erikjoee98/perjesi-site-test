@@ -13,16 +13,14 @@ export default function Navbar() {
 
       setScrolled(currentY > 50);
 
-      // Csak mobilon rejtsük el
       if (window.innerWidth <= 768) {
         const scrollDiff = lastScrollY - currentY;
 
-          if (currentY > lastScrollY && currentY > 100) {
-            setHidden(true); // lefelé → elrejt
-          } else if (scrollDiff > 30 || currentY < 50) {
-            setHidden(false); // csak akkor jön vissza, ha legalább 30px-et felfelé ment
-          }
-
+        if (currentY > lastScrollY && currentY > 100) {
+          setHidden(true);
+        } else if (scrollDiff > 30 || currentY < 50) {
+          setHidden(false);
+        }
       }
 
       setLastScrollY(currentY);
@@ -81,12 +79,12 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobil hamburger menü ikon */}
+          {/* Mobil hamburger ikon */}
           <div className="md:hidden">
             <button
-            className="relative w-6 h-6 flex items-center justify-center focus:outline-none"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
+              className="relative w-6 h-6 flex items-center justify-center focus:outline-none"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
               <span
                 className={`absolute w-6 h-0.5 bg-white transform transition duration-300 ease-in-out ${
                   mobileOpen ? "rotate-45 top-2.5" : "top-0"
@@ -106,53 +104,31 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobil menü - lenyílva */}
+        {/* Mobil menü */}
         <div
           className={`md:hidden overflow-hidden transition-[max-height] duration-500 ease-in-out ${
             mobileOpen ? "max-h-96" : "max-h-0"
           }`}
         >
           <div className="pb-3 pt-2 space-y-2">
-            <a
-              href="#hero"
-              onClick={(e) => {
-                e.preventDefault();
-                handleMobileLinkClick("hero");
-              }}
-              className="block nav-link text-white hover:text-yellow-200 font-bold text-lg"
-            >
-              Kezdőlap
-            </a>
-            <a
-              href="#rolam"
-              onClick={(e) => {
-                e.preventDefault();
-                handleMobileLinkClick("rolam");
-              }}
-              className="block nav-link text-white hover:text-yellow-200 font-bold text-lg"
-            >
-              Rólam
-            </a>
-            <a
-              href="#szolgaltatasok"
-              onClick={(e) => {
-                e.preventDefault();
-                handleMobileLinkClick("szolgaltatasok");
-              }}
-              className="block nav-link text-white hover:text-yellow-200 font-bold text-lg"
-            >
-              Szolgáltatások
-            </a>
-            <a
-              href="#kapcsolat"
-              onClick={(e) => {
-                e.preventDefault();
-                handleMobileLinkClick("kapcsolat");
-              }}
-              className="block nav-link text-white hover:text-yellow-200 font-bold text-lg"
-            >
-              Kapcsolat
-            </a>
+            {[
+              { id: "hero", label: "Kezdőlap" },
+              { id: "rolam", label: "Rólam" },
+              { id: "szolgaltatasok", label: "Szolgáltatások" },
+              { id: "kapcsolat", label: "Kapcsolat" },
+            ].map(({ id, label }) => (
+              <a
+                key={id}
+                href={`#${id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleMobileLinkClick(id);
+                }}
+                className="block nav-link text-white hover:text-yellow-200 font-bold text-lg"
+              >
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
