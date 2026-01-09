@@ -1,12 +1,12 @@
 const services = [
   {
-    title: "Ingatlanügyek",
+    title: "Büntetőjog",
     icon: (
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />,
       <polyline points="9 22 9 12 15 12 15 22" />
     ),
-    desc: "Ingatlan adásvételi szerződések készítése, földhivatali eljárások, tulajdonjogi kérdések szakértői kezelése.",
-    points: ["Adásvételi szerződések", "Földhivatali eljárások", "Tulajdonjogi kérdések"],
+    desc: "Szakszerű és lelkiismeretes védelmet biztosítok büntetőügyekben a nyomozati szaktól a bírósági eljárásig, továbbá vállalom sértetti jogi képviselet ellátását is.",
+    points: ["Nyomozati képviselet", "Bíroság védelem", "Sértetti jogi képviselet"],
   },
   {
     title: "Családjog",
@@ -18,7 +18,7 @@ const services = [
         <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </>
     ),
-    desc: "Házassági vagyonjog, gyermekelhelyezés, tartásdíj és kapcsolattartási ügyek szakszerű kezelése.",
+    desc: "Diszkrét és empatikus jogi segítséget nyújtok házassági vagyonjogi, bontó, valamint szülői felügyeleti, tartásdíj- és kapcsolattartási ügyekben peren kívül és peres eljárásban egyaránt.",
     points: ["Házassági vagyonjog", "Gyermekelhelyezés", "Tartásdíj ügyek"],
   },
   {
@@ -32,8 +32,8 @@ const services = [
         <polyline points="10 9 9 9 8 9" />
       </>
     ),
-    desc: "Szerződések készítése, felülvizsgálata és módosítása, jogi tanácsadás szerződéses kérdésekben.",
-    points: ["Szerződések készítése", "Szerződések felülvizsgálata", "Jogi tanácsadás"],
+    desc: "Szerződések készítése, módosítása és véleményezése magánszemélyek és cégek számára. Célom, hogy minden megállapodás világos, biztonságos és jogilag megalapozott legyen.",
+    points: ["Szerződések készítése", "Szerződésmódosítása", "Szerződésvéleményezés"],
   },
   {
     title: "Gazdasági jog",
@@ -43,11 +43,11 @@ const services = [
         <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
       </>
     ),
-    desc: "Cégalapítás, társasági jogi tanácsadás, cégjogi változások bejelentése, vállalkozások jogi támogatása.",
+    desc: "Komplex jogi támogatást nyújtok vállalkozásoknak és civil szervezeteknek a megalapítástól a mindennapi működés során felmerülő kérdésekig. Stabil és átlátható jogi hátteret biztosítok ügyfeleimnek.",
     points: ["Cégalapítás", "Társasági jogi tanácsadás", "Cégjogi változások"],
   },
   {
-    title: "Öröklési jog",
+    title: "Munkajog",
     icon: (
       <>
         <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
@@ -55,18 +55,18 @@ const services = [
         <path d="M16 10a4 4 0 0 1-8 0" />
       </>
     ),
-    desc: "Végrendeletek készítése, hagyatéki eljárások, öröklési viták rendezése, vagyontervezés.",
-    points: ["Végrendeletek készítése", "Hagyatéki eljárások", "Öröklési viták rendezése"],
+    desc: "Munkajogi tanácsadás munkavállalóknak és munkáltatóknak egyaránt. Segítek munkaszerződések előkészítésében, módosításában, valamint munkaügyi viták peren kívüli és peres úton történő rendezésében.",
+    points: ["Munkaszerződásek előkészítése", "Szerződésmódosítás", "Munkaügyi viták kezelése"],
   },
   {
-    title: "Peres képviselet",
+    title: "Öröklési jog",
     icon: (
       <>
         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
       </>
     ),
-    desc: "Bírósági képviselet polgári, gazdasági és családjogi perekben, peren kívüli egyezségek előkészítése.",
-    points: ["Bírósági képviselet", "Peren kívüli egyezségek", "Jogi képviselet"],
+    desc: "Segítek a jövőre tudatosan felkészülni végrendeletek, és egyéb végintézkedések szerkesztésével, továbbá hagyatéki eljárás során felmerülő öröklési viták jogi rendezésével.",
+    points: ["Végrendeleket és végintézkedések", "Hagyatéki eljárás", "Öröklési viták kezelése"],
   },
 ];
 
@@ -85,8 +85,7 @@ export default function Services() {
           </h2>
           <div className="divider-center"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Ügyvédi irodám széleskörű jogi tanácsadást nyújt magánszemélyek és vállalkozások számára.
-            Célom, hogy minden jogi ügyet személyre szabott, empatikus megközelítéssel és precizitással kezeljek.
+            Teljeskörű jogi tanácsadás, büntetőjogi képviselet, peres és peren kívüli képviselet, valamint követeléskezelés magánszemélyek és vállalkozások számára. Munkámat személyre szabott figyelem, empátia és precíz szakmai alaposság jellemzi.
           </p>
         </div>
 

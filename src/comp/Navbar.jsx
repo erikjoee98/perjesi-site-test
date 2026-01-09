@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { customScrollTo } from "../utils/customtoscroll";
+import logo1 from "/Users/erikjoee/perjesi-dora-ugyved/src/assets/logo1.png"
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -49,7 +50,7 @@ export default function Navbar() {
             className="flex items-center space-x-2 text-white hover:text-yellow-200"
           >
             <img
-              src="/perjesi-site-test/logo.png"
+              src={logo1}
               alt="PD logó"
               className="h-20 w-20 mr-2"
             />

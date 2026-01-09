@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Környezeti változók – ezeket ne töltsd fel!
+.env

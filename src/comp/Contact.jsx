@@ -51,21 +51,21 @@ export default function Contact() {
             <div className="bg-white p-10 shadow-md h-full border border-gray-200 rounded-lg space-y-8">
               <div>
                 <h3 className="text-2xl font-serif font-bold text-[#2B2B2B] mb-4">Elérhetőségek</h3>
-                <p className="text-gray-700 text-lg mb-2"><strong>Cím:</strong> Szeged, Mérey u. 6.</p>
+                <p className="text-gray-700 text-lg mb-2"><strong>Cím:</strong> Szeged, Mérey u. 7.,  1. emelet, 5.ajtó</p>
                 <p className="text-gray-700 text-lg mb-2">
                   <strong>Telefon:</strong>{" "}
-                  <a href="tel:+36301234567" className="text-[#9A8A78] hover:underline">+36 30 123 4567</a>
+                  <a href="tel:+36306355672" className="text-[#9A8A78] hover:underline">+36 30 635 5672</a>
                 </p>
                 <p className="text-gray-700 text-lg">
                   <strong>E-mail:</strong>{" "}
-                  <a href="mailto:info@perjesi-legal.hu" className="text-[#9A8A78] hover:underline">info@perjesi-legal.hu</a>
+                  <a href="mailto:pdoragreta@gmail.com" className="text-[#9A8A78] hover:underline">pdoragreta@gmail.com</a>
                 </p>
               </div>
 
               <div>
                 <iframe
                   title="Dr. Perjési Dóra ügyvédi iroda térkép"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2734.1369826800097!2d20.14577621567816!3d46.25766417911751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47448735e8f2623d%3A0x77768131a4ddc521!2sSzeged%2C%20M%C3%A9rey%20u.%206%2C%206721!5e0!3m2!1shu!2hu!4v1722329080000!5m2!1shu!2hu"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2758.716926208133!2d20.143422376848676!3d46.2558549802708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4744887366c4af31%3A0x50c1b0f11b112fc6!2sSzeged%2C%20M%C3%A9rey%20u.%207%2C%206722!5e0!3m2!1shu!2shu!4v1767957977507!5m2!1shu!2shu"
                   width="100%"
                   height="250"
                   loading="lazy"

@@ -1,3 +1,5 @@
+import perjesi2 from "/Users/erikjoee/perjesi-dora-ugyved/src/assets/perjesi2.jpg"
+
 export default function About() {
   return (
     <section
@@ -10,11 +12,11 @@ export default function About() {
         <div className="flex flex-col md:flex-row items-center gap-16">
           {/* Kép */}
           <div className="md:w-2/5 reveal-left">
-            <div className="relative w-full h-[600px] bg-gray-100 overflow-hidden">
+            <div className="relative w-full h-[600px] md:h-[720px] bg-gray-100 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1000&q=80"
+                src={perjesi2}
                 alt="Dr. Perjési Dóra ügyvéd portréja"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
@@ -28,25 +30,32 @@ export default function About() {
               Bemutatkozás – Dr. Perjési <span className="text-yellow-900">Dóra</span>
             </h2>
             <div className="divider"></div>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Üdvözlöm! Dr. Perjési Dóra vagyok, több mint 10 éves szakmai tapasztalattal rendelkező ügyvéd. Jogi pályafutásomat a Szegedi Tudományegyetem Állam- és Jogtudományi Karán kezdtem, ahol 2021-ben diplomáztam summa cum laude minősítéssel.
+            <p className="text-gray-600 mb-8 leading-snug">
+             Dr. Perjési Dóra Gréta vagyok, a Szegedi Ügyvédi Kamara egyéni ügyvéd tagja. Jogi tanulmányaimat a Szegedi Tudományegyetem Állam-és Jogtudományi Karán végeztem, ahol 2021-ben cum laude minősítéssel szereztem diplomát. Ügyvédjelöltként mind a büntetőjog, mind a polgári jog területén jelentős tapasztalatra tettem szert, majd 2025 őszén jeles eredménnyel szakvizsgáztam.
             </p>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Praxisom során kiemelt figyelmet fordítok arra, hogy ügyfeleimnek magas színvonalú, személyre szabott jogi tanácsadást és képviseletet nyújtsak. Fő szakterületeim az ingatlanjog, családjog, gazdasági jog, valamint szerződéses jogviták.
+            <p className="text-gray-600 mb-8 leading-snug">
+            Egyéni ügyvédként fő szakterületeim a családjog, büntetőjog, munkajog, valamint szerződések készítése, és cégeljárással kapcsolatos jogi képviselet. Ügyfeleim képviselete során kiemelt figyelmet fordítok a személyre szabott megközelítésre, és a megfelelő stratégia kialakítására. Hiszem, hogy minden sikeres, hatékony együttműködés alapja a bizalom, az egyenes kommunikáció és a szakmai felkészültség.
             </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Munkámat az empátia, precizitás és szakmai elhivatottság jellemzi. Célom, hogy minden ügyfelem biztonságban és támogatva érezze magát jogi kérdésekben – legyen szó peres eljárásról, tanácsadásról vagy szerződéskötésről.
-            </p>
-
+            <p className="text-gray-600 mb-8 leading-snug">
+            Kiemelten fontosnak tartom a folyamatos fejlődést, ennek jegyében 2022-ben munkajogi tudásomat tovább mélyítve HR szakjogász végzettséget szereztem jeles minősítéssel.            </p>
+            <p className="text-gray-600 mb-8 leading-snug">
+              Kiemelten fontosnak tartom a folyamatos fejlődést, ennek jegyében 2022-ben munkajogi tudásomat tovább mélyítve HR szakjogász végzettséget szereztem jeles minősítéssel.
+             </p> 
+              <p className="text-gray-600 mb-8 leading-snug">
+                Munkám során mindig arra törekszem, hogy a vonatkozó jogszabályok keretein belül megtaláljam a hozzám fordulók számára legkedvezőbb és legésszerűbb megoldást, ezért minden megbízás egy személyes jogi tanácsadással kezdődik. Ennek keretében tudom személyre szabottan felvázolni a lehetőségeket ügyfeleim részére.
+                </p> 
+                 <p className="text-gray-600 mb-8 leading-snug">
+                  Ha elhivatott, megbízható jogi képviseletet keres, örömmel állok rendelkezésére a lentebb megjelölt elérhetőségeimen.  
+                </p> 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
               {[
-                { value: "10+", label: "Év tapasztalat" },
-                { value: "500+", label: "Sikeres ügy" },
-                { value: "100%", label: "Elkötelezettség" },
+                { value: "100%", label: "Elhivatottság" },
+                { value: "0%", label: "Mellébeszélés"},
+                { value: "1 cél", label: "Az Ön érdekeinek védelme" },
               ].map(({ value, label }, i) => (
                 <div
                   key={i}
-                  className="bg-white p-6 shadow-md"
+                  className="ext-center flex flex-col items-center bg-white p-6 shadow-md"
                   aria-label={`${label}: ${value}`}
                 >
                   <div className="text-4xl font-serif font-bold text-yellow-900 mb-2">

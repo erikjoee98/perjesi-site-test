@@ -1,4 +1,5 @@
 import { customScrollTo } from "../utils/customtoscroll";
+import perjesidora1 from "/Users/erikjoee/perjesi-dora-ugyved/src/assets/perjesi1.jpg"
 
 export default function Hero() {
   return (
@@ -21,9 +22,7 @@ export default function Hero() {
             <div className="divider"></div>
 
             <p className="text-lg text-gray-600 mb-10 max-w-lg">
-              Személyre szabott jogi megoldások, amelyek valódi eredményeket
-              hoznak. Több mint 10 éves tapasztalattal állok ügyfeleim
-              rendelkezésére Szegeden és országosan is.
+              Személyre szabott jogi megoldások, valódi eredményekkel. Ügyfeleim számára a jogi kérdésekben nemcsak szakmai tudást, hanem egyedi figyelmet és megértést kínálok – Szegeden és országszerte, ugyanis hiszem, hogy a hatékony jogi képviselet alapja a bizalom és az együttműködés.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -56,11 +55,15 @@ export default function Hero() {
             className="md:w-1/2 flex justify-center reveal-right"
             style={{ animationDelay: "0.3s" }}
           >
-            <div className="relative w-full h-[500px] bg-gray-100 overflow-hidden">
+            <div className="relative w-full h-[600px] md:h-[680px]  bg-gray-100 overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src={perjesidora1}
                 alt="Modern ügyvédi iroda belső tér"
-                className="w-full h-full object-cover"
+                className="w-full
+                            h-full
+                            object-cover
+                            object-[50%_37%]
+                            scale-105"
               />
             </div>
           </div>
