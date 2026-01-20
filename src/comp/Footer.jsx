@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#2B2B2B] text-white py-16">
+    <footer className="bg-[#2B2B2B] text-white py-5">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Bal oldal: szöveg */}
@@ -38,7 +38,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-gray-400 text-sm text-center md:text-right">
-              © 2025 Dr. Perjési Dóra Ügyvédi Iroda. Minden jog fenntartva.
+              © 2026 Dr. Perjési Dóra Ügyvédi Iroda. Minden jog fenntartva.
             </p>
           </div>
         </div>

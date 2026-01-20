@@ -1,72 +1,49 @@
+
+import { Gavel } from "lucide-react";
+import { Briefcase } from "lucide-react";
+import { Building2 } from "lucide-react";
+import { Scroll } from "lucide-react";
+import { Users } from "lucide-react";
+import { FileText } from "lucide-react";
+
+
 const services = [
   {
     title: "Büntetőjog",
-    icon: (
-      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />,
-      <polyline points="9 22 9 12 15 12 15 22" />
-    ),
+    icon: <Gavel/>,
     desc: "Szakszerű és lelkiismeretes védelmet biztosítok büntetőügyekben a nyomozati szaktól a bírósági eljárásig, továbbá vállalom sértetti jogi képviselet ellátását is.",
-    points: ["Nyomozati képviselet", "Bíroság védelem", "Sértetti jogi képviselet"],
+    points: ["Nyomozati képviselet", "Bíróság védelem", "Sértetti jogi képviselet"],
   },
   {
     title: "Családjog",
-    icon: (
-      <>
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </>
-    ),
+    icon: <Users />,
     desc: "Diszkrét és empatikus jogi segítséget nyújtok házassági vagyonjogi, bontó, valamint szülői felügyeleti, tartásdíj- és kapcsolattartási ügyekben peren kívül és peres eljárásban egyaránt.",
     points: ["Házassági vagyonjog", "Gyermekelhelyezés", "Tartásdíj ügyek"],
   },
   {
     title: "Szerződési jog",
-    icon: (
-      <>
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <polyline points="14 2 14 8 20 8" />
-        <line x1="16" x2="8" y1="13" y2="13" />
-        <line x1="16" x2="8" y1="17" y2="17" />
-        <polyline points="10 9 9 9 8 9" />
-      </>
-    ),
+  icon: <FileText />,
+    
     desc: "Szerződések készítése, módosítása és véleményezése magánszemélyek és cégek számára. Célom, hogy minden megállapodás világos, biztonságos és jogilag megalapozott legyen.",
-    points: ["Szerződések készítése", "Szerződésmódosítása", "Szerződésvéleményezés"],
+    points: ["Szerződések készítése", "Szerződésmódosítása", "Szerződés véleményezés"],
   },
   {
     title: "Gazdasági jog",
-    icon: (
-      <>
-        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
-        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-      </>
-    ),
+      icon: <Building2 />,
     desc: "Komplex jogi támogatást nyújtok vállalkozásoknak és civil szervezeteknek a megalapítástól a mindennapi működés során felmerülő kérdésekig. Stabil és átlátható jogi hátteret biztosítok ügyfeleimnek.",
     points: ["Cégalapítás", "Társasági jogi tanácsadás", "Cégjogi változások"],
   },
   {
     title: "Munkajog",
-    icon: (
-      <>
-        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-        <line x1="3" y1="6" x2="21" y2="6" />
-        <path d="M16 10a4 4 0 0 1-8 0" />
-      </>
-    ),
+    icon: <Briefcase/>,
     desc: "Munkajogi tanácsadás munkavállalóknak és munkáltatóknak egyaránt. Segítek munkaszerződések előkészítésében, módosításában, valamint munkaügyi viták peren kívüli és peres úton történő rendezésében.",
     points: ["Munkaszerződásek előkészítése", "Szerződésmódosítás", "Munkaügyi viták kezelése"],
   },
   {
     title: "Öröklési jog",
-    icon: (
-      <>
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-      </>
-    ),
+      icon: <Scroll />,
     desc: "Segítek a jövőre tudatosan felkészülni végrendeletek, és egyéb végintézkedések szerkesztésével, továbbá hagyatéki eljárás során felmerülő öröklési viták jogi rendezésével.",
-    points: ["Végrendeleket és végintézkedések", "Hagyatéki eljárás", "Öröklési viták kezelése"],
+    points: ["Végrendeletek és végintézkedések", "Hagyatéki eljárás", "Öröklési viták kezelése"],
   },
 ];
 

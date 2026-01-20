@@ -6,6 +6,8 @@ import Services from "./comp/Services";
 import Quote from "./comp/Quote";
 import Contact from "./comp/Contact";
 import Footer from "./comp/Footer";
+
+
 function App() {
  useEffect(() => {
   const reveal = () => {
@@ -41,6 +43,7 @@ function App() {
       <Quote/>
       <Contact/>
        <Footer/>
+      
 
     </>
   );

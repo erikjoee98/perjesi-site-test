@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { customScrollTo } from "../utils/customtoscroll";
-import logo1 from "/Users/erikjoee/perjesi-dora-ugyved/src/assets/logo1.png"
+import logo1 from "/Users/erikjoee/perjesi-dora-ugyved/public/logo.png"
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -42,7 +42,7 @@ export default function Navbar() {
         scrolled ? "shadow-md backdrop-blur bg-gray-900/90" : "bg-gray-900"
       } ${hidden ? "-translate-y-full" : "translate-y-0"}`}
     >
-      <div className="w-full px-6 py-4">
+      <div className="w-full px-6 py-1">
         <div className="flex justify-between items-center">
           {/* Logó + név */}
           <a
@@ -52,7 +52,7 @@ export default function Navbar() {
             <img
               src={logo1}
               alt="PD logó"
-              className="h-20 w-20 mr-2"
+              className="h-17 w-17 mr-3"
             />
             <span className="font-bold text-xl">Dr. Perjési Dóra</span>
           </a>

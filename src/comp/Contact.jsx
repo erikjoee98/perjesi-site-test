@@ -67,7 +67,7 @@ export default function Contact() {
                   title="Dr. Perjési Dóra ügyvédi iroda térkép"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2758.716926208133!2d20.143422376848676!3d46.2558549802708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4744887366c4af31%3A0x50c1b0f11b112fc6!2sSzeged%2C%20M%C3%A9rey%20u.%207%2C%206722!5e0!3m2!1shu!2shu!4v1767957977507!5m2!1shu!2shu"
                   width="100%"
-                  height="250"
+                  height="500"
                   loading="lazy"
                   style={{ border: 0 }}
                   allowFullScreen

@@ -12,11 +12,11 @@ export default function About() {
         <div className="flex flex-col md:flex-row items-center gap-16">
           {/* Kép */}
           <div className="md:w-2/5 reveal-left">
-            <div className="relative w-full h-[600px] md:h-[720px] bg-gray-100 overflow-hidden">
+            <div className="relative w-full h-[600px] md:h-[720px] overflow-hidden">
               <img
                 src={perjesi2}
                 alt="Dr. Perjési Dóra ügyvéd portréja"
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-cover"
               />
             </div>
           </div>
@@ -27,7 +27,7 @@ export default function About() {
             style={{ animationDelay: "0.3s" }}
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
-              Bemutatkozás – Dr. Perjési <span className="text-yellow-900">Dóra</span>
+              Bemutatkozás – Dr. Perjési Dóra
             </h2>
             <div className="divider"></div>
             <p className="text-gray-600 mb-8 leading-snug">
@@ -38,9 +38,7 @@ export default function About() {
             </p>
             <p className="text-gray-600 mb-8 leading-snug">
             Kiemelten fontosnak tartom a folyamatos fejlődést, ennek jegyében 2022-ben munkajogi tudásomat tovább mélyítve HR szakjogász végzettséget szereztem jeles minősítéssel.            </p>
-            <p className="text-gray-600 mb-8 leading-snug">
-              Kiemelten fontosnak tartom a folyamatos fejlődést, ennek jegyében 2022-ben munkajogi tudásomat tovább mélyítve HR szakjogász végzettséget szereztem jeles minősítéssel.
-             </p> 
+           
               <p className="text-gray-600 mb-8 leading-snug">
                 Munkám során mindig arra törekszem, hogy a vonatkozó jogszabályok keretein belül megtaláljam a hozzám fordulók számára legkedvezőbb és legésszerűbb megoldást, ezért minden megbízás egy személyes jogi tanácsadással kezdődik. Ennek keretében tudom személyre szabottan felvázolni a lehetőségeket ügyfeleim részére.
                 </p> 
